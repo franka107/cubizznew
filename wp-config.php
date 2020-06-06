@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The base configuration for WordPress
  *
@@ -17,25 +18,25 @@
  *
  * @package WordPress
  */
-
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'bizzperu_WPYAR');
-
-/** MySQL database username */
-define('DB_USER', 'bizzperu_WPYAR');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'b}Qt#vb^)A>CbT}:#');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+if (file_exists(dirname(__FILE__) . '/local.php')) {
+	// Local database settings
+	define('DB_NAME', 'cubizznewdb');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', '');
+	define('DB_HOST', 'localhost');
+} else {
+	// Live database settings
+	define('DB_NAME', 'bizzperu_cubizznew');
+	define('DB_USER', 'bizzperu_cunew');
+	define('DB_PASSWORD', 'b}Qt#vb^)A>CbT}:#');
+	define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -82,13 +83,13 @@ define('WP_AUTO_UPDATE_CORE', true);
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+if (!defined('ABSPATH')) {
+	define('ABSPATH', __DIR__ . '/');
 }
 
 /** Sets up WordPress vars and included files. */
