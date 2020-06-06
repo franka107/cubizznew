@@ -20,7 +20,7 @@
  */
 if (file_exists(dirname(__FILE__) . '/local.php')) {
 	// Local database settings
-	define('DB_NAME', 'cubizznewdb');
+	define('DB_NAME', 'newcubizzdb');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', '');
 	define('DB_HOST', 'localhost');
