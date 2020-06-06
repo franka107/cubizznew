@@ -24,6 +24,10 @@ if (file_exists(dirname(__FILE__) . '/local.php')) {
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', '');
 	define('DB_HOST', 'localhost');
+	//define('DB_NAME', 'bizzperu_WPYAR');
+	//define('DB_USER', 'bizzperu_WPYAR');
+	//define('DB_PASSWORD', 'b}Qt#vb^)A>CbT}:#');
+	//define('DB_HOST', '162.241.252.14');
 } else {
 	// Live database settings
 	define('DB_NAME', 'bizzperu_WPYAR');
