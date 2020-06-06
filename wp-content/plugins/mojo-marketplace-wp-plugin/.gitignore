@@ -1,5 +1,5 @@
 # Composer
-/vendor
+# /vendor
 
 # System and IDE files
 .DS_Store
