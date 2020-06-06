@@ -20,6 +20,7 @@
  */
 if (file_exists(dirname(__FILE__) . '/local.php')) {
 	// Local database settings
+	$table_prefix = 'rRe_';
 	define('DB_NAME', 'newcubizzdb');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', '');
@@ -30,6 +31,7 @@ if (file_exists(dirname(__FILE__) . '/local.php')) {
 	//define('DB_HOST', '162.241.252.14');
 } else {
 	// Live database settings
+	$table_prefix = 'rre_';
 	define('DB_NAME', 'bizzperu_WPYAR');
 	define('DB_USER', 'bizzperu_WPYAR');
 	define('DB_PASSWORD', 'b}Qt#vb^)A>CbT}:#');
@@ -68,7 +70,6 @@ define('NONCE_SALT', '47f94c28aeddcd761ee587d0ac145592f44b9a827cb9eae312aec7fe88
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'rRe_';
 define('WP_CRON_LOCK_TIMEOUT', 120);
 define('AUTOSAVE_INTERVAL', 300);
 define('WP_POST_REVISIONS', 5);
