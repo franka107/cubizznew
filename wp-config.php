@@ -27,7 +27,7 @@ if (file_exists(dirname(__FILE__) . '/local.php')) {
 } else {
 	// Live database settings
 	define('DB_NAME', 'bizzperu_cubizznew');
-	define('DB_USER', 'bizzperu_cunew');
+	define('DB_USER', 'bizzperu_WPYAR');
 	define('DB_PASSWORD', 'b}Qt#vb^)A>CbT}:#');
 	define('DB_HOST', 'localhost');
 }
