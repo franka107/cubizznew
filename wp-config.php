@@ -68,7 +68,7 @@ define('NONCE_SALT', '47f94c28aeddcd761ee587d0ac145592f44b9a827cb9eae312aec7fe88
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'rRe_';
+$table_prefix = 'store_';
 define('WP_CRON_LOCK_TIMEOUT', 120);
 define('AUTOSAVE_INTERVAL', 300);
 define('WP_POST_REVISIONS', 5);
