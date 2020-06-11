@@ -26,6 +26,7 @@ function child_enqueue_styles()
 add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
 
 add_shortcode('login_logut', 'login_logut');
+add_shortcode('login_logut_icon', 'login_logut_icon');
 /**
  * Add a login/logout shortcode button
  * @since 1.0.0
@@ -45,6 +46,28 @@ function login_logut()
 	?>
 		<i aria-hidden="true" class="fas fa-user" style="color: red;"></i>
 		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Iniciar Sesión/ Registrarse</a>
+
+	<?php
+	endif;
+
+	return ob_get_clean();
+}
+function login_logut_icon()
+{
+	ob_start();
+	if (is_user_logged_in()) :
+		// Set the logout URL - below it is set to the root URL
+	?>
+		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>"><i aria-hidden="true" class="fas fa-lock" style="color: red;"></i>Salir</a>
+
+	<?php
+	else :
+		// Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
+	?>
+		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
+			<i aria-hidden="true" class="fas fa-user" style="color: red;"></i>
+			Iniciar Sesión
+		</a>
 
 <?php
 	endif;
