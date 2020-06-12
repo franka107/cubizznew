@@ -37,14 +37,14 @@ function login_logut()
 	if (is_user_logged_in()) :
 		// Set the logout URL - below it is set to the root URL
 ?>
-		<i aria-hidden="true" class="fas fa-lock" style="color: red;"></i>
+		<i aria-hidden="true" class="fas fa-lock" style="color: #74c32c;"></i>
 		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>">Cerrar Sesión</a>
 
 	<?php
 	else :
 		// Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
 	?>
-		<i aria-hidden="true" class="fas fa-user" style="color: red;"></i>
+		<i aria-hidden="true" class="fas fa-user" style="color: #74c32c;"></i>
 		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Iniciar Sesión/ Registrarse</a>
 
 	<?php
@@ -58,14 +58,14 @@ function login_logut_icon()
 	if (is_user_logged_in()) :
 		// Set the logout URL - below it is set to the root URL
 	?>
-		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>"><i aria-hidden="true" class="fas fa-lock" style="color: red;"></i>Salir</a>
+		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>"><i aria-hidden="true" class="fas fa-lock" style="color: #74c32c;"></i>Salir</a>
 
 	<?php
 	else :
 		// Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
 	?>
 		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
-			<i aria-hidden="true" class="fas fa-user" style="color: red;"></i>
+			<i aria-hidden="true" class="fas fa-user" style="color: #74c32c;"></i>
 			Iniciar Sesión
 		</a>
 
