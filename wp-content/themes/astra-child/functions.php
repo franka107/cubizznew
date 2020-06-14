@@ -37,15 +37,13 @@ function login_logut()
 	if (is_user_logged_in()) :
 		// Set the logout URL - below it is set to the root URL
 ?>
-		<i aria-hidden="true" class="fas fa-lock" style="color: #74c32c;"></i>
-		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>">Cerrar Sesión</a>
+		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>" style="color:white"><i aria-hidden="true" class="fas fa-lock"></i> Cerrar Sesión</a>
 
 	<?php
 	else :
 		// Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
 	?>
-		<i aria-hidden="true" class="fas fa-user" style="color: #74c32c;"></i>
-		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Iniciar Sesión/ Registrarse</a>
+		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" style="color: white;"><i aria-hidden="true" class="fas fa-user"></i> Iniciar Sesión/ Registrarse</a>
 
 	<?php
 	endif;
@@ -58,18 +56,18 @@ function login_logut_icon()
 	if (is_user_logged_in()) :
 		// Set the logout URL - below it is set to the root URL
 	?>
-		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>"><i aria-hidden="true" class="fas fa-lock" style="color: #74c32c;"></i>Salir</a>
+		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>" style="color: white"><i aria-hidden="true" class="fas fa-lock"></i> Salir</a>
 
 	<?php
 	else :
 		// Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
 	?>
-		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
-			<i aria-hidden="true" class="fas fa-user" style="color: #74c32c;"></i>
+		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" style="color: white;">
+			<i aria-hidden="true" class="fas fa-user"></i>
 			Iniciar Sesión
 		</a>
 
-<?php
+	<?php
 	endif;
 
 	return ob_get_clean();
@@ -88,3 +86,12 @@ function woocommerce_custom_product_add_to_cart_text()
 {
 	return __('+Carrito', 'woocommerce');
 }
+
+
+function add_meta_tags()
+{
+	?>
+	<meta name="theme-color" content="#0794DA" />
+
+<?php }
+add_action('wp_head', 'add_meta_tags');
