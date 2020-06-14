@@ -37,13 +37,13 @@ function login_logut()
 	if (is_user_logged_in()) :
 		// Set the logout URL - below it is set to the root URL
 ?>
-		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>" style="color:white"><i aria-hidden="true" class="fas fa-lock"></i> Cerrar Sesión</a>
+		<a role="button" href="<?php echo wp_logout_url(get_permalink()); ?>" style="color:black; font-size: 13px; "><i aria-hidden="true" class="fas fa-lock"></i> Cerrar Sesión</a>
 
 	<?php
 	else :
 		// Set the login URL - below it is set to get_permalink() - you can set that to whatever URL eg '/whatever'
 	?>
-		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" style="color: white;"><i aria-hidden="true" class="fas fa-user"></i> Iniciar Sesión/ Registrarse</a>
+		<a role="button" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" style="color: black; font-size: 13px"><i aria-hidden="true" class="fas fa-user"></i> Iniciar Sesión/ Registrarse</a>
 
 	<?php
 	endif;
