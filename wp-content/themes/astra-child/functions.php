@@ -91,7 +91,7 @@ function woocommerce_custom_product_add_to_cart_text()
 function add_meta_tags()
 {
 	?>
-	<meta name="theme-color" content="#00AEEF" />
+	<meta name="theme-color" content="#F89F32" />
 
 <?php }
 add_action('wp_head', 'add_meta_tags');
